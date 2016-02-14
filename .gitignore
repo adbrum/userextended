@@ -1,0 +1,9 @@
+.DS_Store
+.env
+.idea
+.registro
+*.sqlite3
+*.pyc
+__pycache__
+staticfiles
+.ipynb_checkpoints/
