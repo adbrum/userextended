@@ -1,9 +1,8 @@
 from django.db import models
-from django.contrib.auth.models import User, UserManager
+from django.contrib.auth.models import User
 
 
 class Pessoa(User):
-    print('XXXXXXXXXXXXX')
     cpf = models.IntegerField(null=False, blank=False)
     rg = models.IntegerField(null=False, blank=False)
     tipo_pessoa = models.IntegerField()
