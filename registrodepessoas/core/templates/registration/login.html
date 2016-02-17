@@ -11,7 +11,7 @@
         <form action="{% url 'django.contrib.auth.views.login' %}" method="post" class="form-horizontal" role="form">{% csrf_token %}
             <legend><span class="col-sm-offset-1">{% trans 'Log in' %}</span></legend>
             {% for field in form %}
-                {% include 'core/form_field.html' %}
+                {% include 'registration/form_field.html' %}
             {% endfor %}
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="content">
+<h1>Registro de Utilizador</h1>
+
+<form method="post" action=".">
+    {% csrf_token %}
+    <div>
+        <label>{{ form.username.label_tag }}</label>
+        {{ form.username }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.password.label_tag }}</label>
+        {{ form.password }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.first_name.label_tag }}</label>
+        {{ form.first_name }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.last_name.label_tag }}</label>
+        {{ form.last_name }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.cpf.label_tag }}</label>
+        {{ form.cpf }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.rg.label_tag }}</label>
+        {{ form.rg }}
+    </div>
+    <br/>
+    <div>
+        <label>{{ form.email.label_tag }}</label>
+        {{ form.email }}
+    </div>
+    <br/>
+    <br/>
+    <div>
+        <label>{{ form.choice_field.label_tag }}</label>
+        {{ form.choice_field }}
+    </div>
+    </br>
+
+    <div>
+        <button class="btn-lg" type="submit">Entrar</button>
+    </div>
+</form>
+    {% endblock container %}
