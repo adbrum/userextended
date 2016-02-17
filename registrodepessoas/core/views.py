@@ -22,8 +22,8 @@ def register(request):
 
             tableuser.save()
 
-        return render(request, 'register.html',
+        return render(request, 'registration/register.html',
                       {'form': form})
     else:
-        return render(request, 'register.html',
+        return render(request, 'registration/register.html',
                       {'form': LoginForm()})

@@ -6,6 +6,8 @@ from registrodepessoas.core.views import register
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="base.html"), name='index'),
     url(r'', include('django.contrib.auth.urls')),
+    # url(r'', include('django.contrib.auth.urls')),
     url(r'^registrar/$', register, name='register'),
-    url(r'^admin/', include(admin.site.urls)),
+    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
 ]
