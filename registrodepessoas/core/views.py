@@ -19,11 +19,10 @@ def register(request):
 
             # encripta a pwd
             tableuser.set_password(form.cleaned_data['password'])
-
             tableuser.save()
 
         return render(request, 'registration/register.html',
-                      {'form': form})
+                      {'form': LoginForm()})
     else:
         return render(request, 'registration/register.html',
                       {'form': LoginForm()})
